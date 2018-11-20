@@ -22,13 +22,13 @@ void print(vector<T> vec){
 int main() {
 
     ifstream inFile;
-    inFile.open("test.txt");
+    inFile.open("test2.txt");
 
     BST_312<string> bst;
    
     string s;
     inFile >> s;
-    while (inFile) {;
+    while (inFile) {
         cout << "inserting ... " << s << endl;
         bst.insertItem(s);
         inFile >> s;
@@ -44,6 +44,24 @@ int main() {
 
     cout << "inorder traversal is " << endl;
     print(bst.inOrderTraversal());
+    cout << endl;
+
+
+//    string t = "series";
+//    string x = "bob";
+
+    cout << "'series' is " << endl;
+    if(bst.isItemInTree("3"))
+        cout<<"in the tree"<<endl;
+    else
+        cout<<"not in the tree"<<endl;
+    cout << endl;
+
+    cout << "'bob' is " << endl;
+    if(bst.isItemInTree("21"))
+        cout<<"in the tree"<<endl;
+    else
+        cout<<"not in the tree"<<endl;
     cout << endl;
 
     cout << "Remove items " << endl;
